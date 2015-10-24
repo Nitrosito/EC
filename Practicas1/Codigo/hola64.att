@@ -1,0 +1,23 @@
+
+hola64:     formato del fichero elf64-x86-64
+
+
+Desensamblado de la sección .text:
+
+00000000004000b0 <write>:
+  4000b0:	48 c7 c0 01 00 00 00 	mov    $0x1,%rax
+  4000b7:	48 c7 c7 01 00 00 00 	mov    $0x1,%rdi
+  4000be:	48 c7 c6 e6 00 60 00 	mov    $0x6000e6,%rsi
+  4000c5:	48 8b 14 25 f4 00 60 	mov    0x6000f4,%rdx
+  4000cc:	00 
+  4000cd:	0f 05                	syscall 
+  4000cf:	c3                   	retq   
+
+00000000004000d0 <exit>:
+  4000d0:	48 c7 c0 3c 00 00 00 	mov    $0x3c,%rax
+  4000d7:	48 31 ff             	xor    %rdi,%rdi
+  4000da:	0f 05                	syscall 
+
+00000000004000dc <_start>:
+  4000dc:	e8 cf ff ff ff       	callq  4000b0 <write>
+  4000e1:	e8 ea ff ff ff       	callq  4000d0 <exit>

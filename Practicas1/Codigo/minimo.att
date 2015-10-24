@@ -1,0 +1,10 @@
+
+minimo:     formato del fichero elf32-i386
+
+
+Desensamblado de la sección .text:
+
+08048054 <_start>:
+ 8048054:	b8 01 00 00 00       	mov    $0x1,%eax
+ 8048059:	31 db                	xor    %ebx,%ebx
+ 804805b:	cd 80                	int    $0x80

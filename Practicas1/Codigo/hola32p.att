@@ -1,0 +1,27 @@
+
+hola32p:     formato del fichero elf32-i386
+
+
+Desensamblado de la sección .text:
+
+08048054 <write>:
+ 8048054:	68 0a 20 20 20       	push   $0x2020200a
+ 8048059:	68 6e 64 6f 21       	push   $0x216f646e
+ 804805e:	68 2c 20 6d 75       	push   $0x756d202c
+ 8048063:	68 68 6f 6c 61       	push   $0x616c6f68
+ 8048068:	b8 04 00 00 00       	mov    $0x4,%eax
+ 804806d:	bb 01 00 00 00       	mov    $0x1,%ebx
+ 8048072:	89 e1                	mov    %esp,%ecx
+ 8048074:	ba 0d 00 00 00       	mov    $0xd,%edx
+ 8048079:	cd 80                	int    $0x80
+ 804807b:	83 c4 10             	add    $0x10,%esp
+ 804807e:	c3                   	ret    
+
+0804807f <exit>:
+ 804807f:	b8 01 00 00 00       	mov    $0x1,%eax
+ 8048084:	31 db                	xor    %ebx,%ebx
+ 8048086:	cd 80                	int    $0x80
+
+08048088 <_start>:
+ 8048088:	e8 c7 ff ff ff       	call   8048054 <write>
+ 804808d:	e8 ed ff ff ff       	call   804807f <exit>

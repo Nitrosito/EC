@@ -1,0 +1,22 @@
+
+hola32.o:     formato del fichero elf32-i386
+
+
+Desensamblado de la sección .text:
+
+00000000 <write>:
+   0:	b8 04 00 00 00       	mov    $0x4,%eax
+   5:	bb 01 00 00 00       	mov    $0x1,%ebx
+   a:	b9 00 00 00 00       	mov    $0x0,%ecx
+   f:	8b 15 0e 00 00 00    	mov    0xe,%edx
+  15:	cd 80                	int    $0x80
+  17:	c3                   	ret    
+
+00000018 <exit>:
+  18:	b8 01 00 00 00       	mov    $0x1,%eax
+  1d:	31 db                	xor    %ebx,%ebx
+  1f:	cd 80                	int    $0x80
+
+00000021 <_start>:
+  21:	e8 da ff ff ff       	call   0 <write>
+  26:	e8 ed ff ff ff       	call   18 <exit>
